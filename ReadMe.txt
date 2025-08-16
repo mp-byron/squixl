@@ -31,4 +31,5 @@ The demo needs to have a mqtt broker running on the network.  I use an old raspb
 
 The secrets.py file will need to be amended for the mqtt broker address and the wifi ssid and pw as appropriate.
 
-
+Note: The mqtt client program used in this demo is the most excellent one created by Peter Hinch 
+https://github.com/peterhinch/micropython-mqtt
