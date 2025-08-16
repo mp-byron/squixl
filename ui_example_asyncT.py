@@ -368,19 +368,6 @@ async def test_publish(client, topic, wait_time):
         
         await asyncio.sleep(wait_time)
     
-# ***********************************************************    
-
-
-def wifi():
-    wlan = network.WLAN(network.STA_IF)
-    wlan.active(True)
-    if not wlan.isconnected():
-        sprint.set_text('connecting to network...', font_bold_22, GREEN)
-        wlan.connect(SSID, PW)
-        while not wlan.isconnected():
-            pass
-    sprint.set_text('network connected:', font_bold_22, GREEN)
-    #sprint.set_text(str( wlan.ifconfig()),font_bold_22, GREEN)
 
 
 async def demo_dial2():
@@ -400,7 +387,21 @@ async def demo_cpu_pb():
         if val > 100:
             val = 0
         await asyncio.sleep(1)
- 
+
+# ***********************************************************    
+
+
+def wifi():
+    wlan = network.WLAN(network.STA_IF)
+    wlan.active(True)
+    if not wlan.isconnected():
+        sprint.set_text('connecting to network...', font_bold_22, GREEN)
+        wlan.connect(SSID, PW)
+        while not wlan.isconnected():
+            pass
+    sprint.set_text('network connected:', font_bold_22, GREEN)
+    #sprint.set_text(str( wlan.ifconfig()),font_bold_22, GREEN)
+
 
 async def main(client):
     wifi()
