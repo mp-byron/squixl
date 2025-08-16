@@ -27,7 +27,7 @@ The demo is not meant as a fully robust code for newbies, for example only a sin
 
 The demo program (ui_example_asyncT.py) has 2 logical screens (three if the startup screen is counted).  A screen swipe to right will show the dials screen a swipe to the left will go back to the home screen.   Alternatively each screen has a button that will go to the other screen.
 
-The demo needs to have a mqtt broker running on the network.  I use an old raspberry pi to run the mosquitto mqtt broker.   The demo will publish messages to the broker on the topics that the demo has subscribed to.  This shows the dial controls being continually updated with updated data even when those controls are not visible on the current screen.  Moving to the screen on which the dials are assign to will then show the current value of the dial controls.   
+The demo needs to have a mqtt broker running on the network.  I use an old raspberry pi to run the mosquitto mqtt broker.   The demo will publish messages to the broker on the topics that the demo has subscribed to.  When the message is subsequently received it updates a dial widget. This shows the dial controls being continually updated with updated data even when those controls are not visible on the current screen.  Moving to the screen on which the dials are assigned will then show the current value of the dial widgets.   
 
 The secrets.py file will need to be amended for the mqtt broker address and the wifi ssid and pw as appropriate.
 
