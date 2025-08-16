@@ -1,4 +1,4 @@
-Adding to the example micropython files as per the Unexpected Maker squixel github this demo code includes textbox and dial controls or widgets 
+Adding to the example micropython files as per the Unexpected Maker squixl github this demo code includes textbox and dial controls or widgets 
 
 The UIManager from the UM example has been modified and the UIScreen class has been deleted and incorporated into the UIManager class (just a personal preference nothing wrong with the original :-)  ) 
 
